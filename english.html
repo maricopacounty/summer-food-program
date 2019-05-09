@@ -5,7 +5,14 @@
 <head>
 
 <!-- START GA TRACKING CODE -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127327316-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-127327316-3');
+</script>
 <!-- END GA TRACKING CODE -->
 
 <title>Summer Lunch Buddies | Kids Eat Free All Summer Long</title>
@@ -172,6 +179,19 @@
     }
 }
 
+@media screen and (min-width: 601px) { /* ADJUST SIZE TO ALLOW SPACE TO SCROLL PAGE */
+ .mapContainer {
+    width: 70%;
+    margin: auto; 
+    }
+}
+
+@media screen and (max-width: 600px) { /* ADJUST SIZE TO ALLOW SPACE TO SCROLL PAGE */
+  .mapContainer {
+    width: 100%; 
+    }
+}
+
 .responsiveImg {
   width: 100%;
   height: auto;
@@ -210,6 +230,15 @@
 .alignCenter {
 	text-align: center;
 }
+
+.imgFluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
 
 /* START ACCORDION STYLING */
 
@@ -287,8 +316,16 @@
 
 <!-- END CUSTOM STYLES -->
 
-<!-- START LO TRACKING CODE -->
+<!-- LO TRACKING CODE -->
+<script type="text/javascript">
+window.__lo_site_id = 126385;
 
+  (function() {
+    var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+		wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+	  })();
+</script>
 <!-- END LO TRACKING CODE -->
 
 </head>
@@ -330,12 +367,18 @@
 <!-- START SITE MAP DIV -->
 <div class="w3-row-padding responsiveBox2">
 
+<!-- MAP IMAGE PLACEHOLDER 
 <img src="https://maricopacounty.github.io/summer-food-program/img/site-map-placeholder.png" class="responsiveImg">
-<!-- GOOGLE MAP EMBED CODE
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.google.com/maps/d/embed?mid=1Z60Gx6Pu6P7cMEmhfARpM1mdWRo&amp;z=10&amp;ll=33.52000,-111.93000" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 -->
 
-<!-- CODE FOR API ONCE WE SET IT UP
+<!-- PLACEHOLDER GOOGLE MAP
+<div class="mapContainer" style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.google.com/maps/d/embed?mid=1Z60Gx6Pu6P7cMEmhfARpM1mdWRo&amp;z=11&amp;ll=33.52000,-111.93000" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+-->
+
+<!-- AZ HEALTH ZONE COMING SOON IMAGE -->
+<div><img alt="Summer Food Service Program" class="imgFluid" src="https://www.azhealthzone.org/images/content/summerfood/summerfood-coming-soon-map-en.jpg" /></div>
+
+<!-- AZ HEALTH ZONE MAP API EMBED
 <iframe frameborder="0" height="680" scrolling="no" src="https://www.azhealthzone.org/farmersmarkets/embed" width="100%"></iframe>
 -->
 
@@ -359,91 +402,81 @@
 
     <div class="option">
     <input type="checkbox" id="toggle1" class="toggle" />
-      <label class="title" for="toggle1">Question 01 goes here to replace this placeholder text...lorem ipsum dolor sit amet, consectetur adipiscing elit?
-    </label>
+      <label class="title" for="toggle1">Does this program just serve lunch?</label>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis lacinia porttitor elit ac semper. Maecenas ac magna ac nisi ultrices cursus quis molestie quam. Donec neque lacus, vestibulum sed elementum at, lacinia quis neque. Donec lobortis, magna eu tempor porta, lectus nisi sodales mauris.</p>
+        <p>Summer Lunch Buddies serves breakfast, lunch, snacks and dinner, but meal service is determined by each location. Please use the interactive map above to find the location near you, check which meals are served, and the times for each meal service.</p>
       </div>
     </div>
 
     <div class="option">
     <input type="checkbox" id="toggle2" class="toggle" />
-      <label class="title" for="toggle2">Question 02 goes here to replace this placeholder text...lorem ipsum dolor sit amet, consectetur adipiscing elit?
-    </label>
+      <label class="title" for="toggle2">What time are meals served?</label>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis lacinia porttitor elit ac semper. Maecenas ac magna ac nisi ultrices cursus quis molestie quam. Donec neque lacus, vestibulum sed elementum at, lacinia quis neque. Donec lobortis, magna eu tempor porta, lectus nisi sodales mauris.</p>
+        <p>Meal times vary by location. Please use the interactive map above to find the location near you and check the times for each meal service.</p>
       </div>
     </div>
 
     <div class="option">
     <input type="checkbox" id="toggle3" class="toggle" />
-      <label class="title" for="toggle3">Question 03 goes here to replace this placeholder text...lorem ipsum dolor sit amet, consectetur adipiscing elit?
-    </label>
+      <label class="title" for="toggle3">Is there a daily schedule that lists a menu for what is being served?</label>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis lacinia porttitor elit ac semper. Maecenas ac magna ac nisi ultrices cursus quis molestie quam. Donec neque lacus, vestibulum sed elementum at, lacinia quis neque. Donec lobortis, magna eu tempor porta, lectus nisi sodales mauris.</p>
+        <p>Locations may or may not provide a menu ahead of time. Ask the feeding site staff for a schedule when you stop by for a meal.</p>
       </div>
     </div>
 
     <div class="option">
     <input type="checkbox" id="toggle4" class="toggle" />
-      <label class="title" for="toggle4">Question 04 goes here to replace this placeholder text...lorem ipsum dolor sit amet, consectetur adipiscing elit?
-    </label>
+      <label class="title" for="toggle4">Can meals be taken to go or do they have to be eaten at the feeding site?</label>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis lacinia porttitor elit ac semper. Maecenas ac magna ac nisi ultrices cursus quis molestie quam. Donec neque lacus, vestibulum sed elementum at, lacinia quis neque. Donec lobortis, magna eu tempor porta, lectus nisi sodales mauris.</p>
+        <p>Meals must be consumed at the summer food site. This type of meal service allows children to eat a nutritious meal while enjoying the companionship of their friends and other members of the community. Sponsors may allow children to take one fruit, vegetable or grain item off-site to eat later.</p>
       </div>
     </div>
 
     <div class="option">
     <input type="checkbox" id="toggle5" class="toggle" />
-      <label class="title" for="toggle5">Question 05 goes here to replace this placeholder text...lorem ipsum dolor sit amet, consectetur adipiscing elit?
-    </label>
+      <label class="title" for="toggle5">Are there activities for kids at the feeding sites and what are they?</label>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis lacinia porttitor elit ac semper. Maecenas ac magna ac nisi ultrices cursus quis molestie quam. Donec neque lacus, vestibulum sed elementum at, lacinia quis neque. Donec lobortis, magna eu tempor porta, lectus nisi sodales mauris.</p>
+        <p>Locations may or may not provide activities. You can find a phone number for each location by using the interactive map above.</p>
       </div>
     </div>
 
     <div class="option">
     <input type="checkbox" id="toggle6" class="toggle" />
-      <label class="title" for="toggle6">Question 06 goes here to replace this placeholder text...lorem ipsum dolor sit amet, consectetur adipiscing elit?
-    </label>
+      <label class="title" for="toggle6">Are there any programs for seniors?</label>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis lacinia porttitor elit ac semper. Maecenas ac magna ac nisi ultrices cursus quis molestie quam. Donec neque lacus, vestibulum sed elementum at, lacinia quis neque. Donec lobortis, magna eu tempor porta, lectus nisi sodales mauris.</p>
+        <p>There is not a specific program for seniors, but some sites do offer reduced-cost meals for any adult over 18 years of age. The interactive map above maps shows which locations offer adult meals and the prices of those meals.</p>
       </div>
     </div>
 
     <div class="option">
     <input type="checkbox" id="toggle7" class="toggle" />
-      <label class="title" for="toggle7">Question 07 goes here to replace this placeholder text...lorem ipsum dolor sit amet, consectetur adipiscing elit?
-    </label>
+      <label class="title" for="toggle7">Can I volunteer for this program or help pass out meals?</label>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis lacinia porttitor elit ac semper. Maecenas ac magna ac nisi ultrices cursus quis molestie quam. Donec neque lacus, vestibulum sed elementum at, lacinia quis neque. Donec lobortis, magna eu tempor porta, lectus nisi sodales mauris.</p>
+        <p>Summer food sites are staffed by sponsoring organizations, and additional volunteer needs vary by community. If you are interested in volunteering, please call 602-542-3210 and we’ll do our best to match you with an appropriate organization.</p>
       </div>
     </div>
 
     <div class="option">
     <input type="checkbox" id="toggle8" class="toggle" />
-      <label class="title" for="toggle8">Question 08 goes here to replace this placeholder text...lorem ipsum dolor sit amet, consectetur adipiscing elit?
-    </label>
+      <label class="title" for="toggle8">Can I donate to this program?</label>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis lacinia porttitor elit ac semper. Maecenas ac magna ac nisi ultrices cursus quis molestie quam. Donec neque lacus, vestibulum sed elementum at, lacinia quis neque. Donec lobortis, magna eu tempor porta, lectus nisi sodales mauris.</p>
+        <p>Summer food sites are operated by sponsoring organizations such as school districts, food banks, and community centers. If you are interested in making a donation to a non-profit organization working to end hunger, please call 602-542-3210 and we’ll do our best to connect you with an organization in your area.</p>
       </div>
     </div>
 
     <div class="option">
     <input type="checkbox" id="toggle9" class="toggle" />
-      <label class="title" for="toggle9">Question 09 goes here to replace this placeholder text...lorem ipsum dolor sit amet, consectetur adipiscing elit?
-    </label>
+      <label class="title" for="toggle9">Why is proof of income not required to participate?</label>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis lacinia porttitor elit ac semper. Maecenas ac magna ac nisi ultrices cursus quis molestie quam. Donec neque lacus, vestibulum sed elementum at, lacinia quis neque. Donec lobortis, magna eu tempor porta, lectus nisi sodales mauris.</p>
+        <p>The Summer Food Service Program (SFSP) was established to ensure that low-income children continue to receive nutritious meals when school is not in session. Free meals that meet Federal nutrition guidelines are provided to all children at approved SFSP sites in areas with significant concentrations of low-income children.</p>
       </div>
     </div>
 
     <div class="option">
     <input type="checkbox" id="toggle10" class="toggle" />
-      <label class="title" for="toggle10">Question 10 goes here to replace this placeholder text...lorem ipsum dolor sit amet, consectetur adipiscing elit?
-    </label>
+      <label class="title" for="toggle10">Who funds this program?</label>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis lacinia porttitor elit ac semper. Maecenas ac magna ac nisi ultrices cursus quis molestie quam. Donec neque lacus, vestibulum sed elementum at, lacinia quis neque. Donec lobortis, magna eu tempor porta, lectus nisi sodales mauris.</p>
+        <p>The Summer Food Service Program (SFSP) is a federally-funded child nutrition program that ensures free nutritious meals are available for children and teens ages 18 and younger while school is out of session. Summer Lunch Buddies is Arizona’s campaign for the SFSP.</p>
       </div>
     </div>
 
@@ -464,9 +497,9 @@
 <p>Our mailing address is:<br/ >
 Maricopa County<br/ >
 4041 N. Central Ave, Suite 1400<br/ >
-Phoenix, AZ 85012<br/ >
-<a href="tel:+1-602-506-3011">602-506-3011</a></p>
+Phoenix, AZ 85012</p>
 <p style="margin-top:60px;">This material was funded by USDA’s Supplemental Nutrition Assistance Program (SNAP) through the AZ Health Zone. This institution is an equal opportunity provider.</p>
+<p><small>If you have any questions about Summer Lunch Buddies or the above mapping tool, please email the <a href="mailto:sfsp@azed.gov?subject=Summer Lunch Buddies">AZ Department of Education</a> or call <a href="tel:+1-602-506-3011">602-506-3011</a> and press extension 1.</small></p>
 </div>
 
 </div>
