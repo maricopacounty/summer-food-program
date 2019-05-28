@@ -109,21 +109,30 @@
 }
 
 .responsiveBox2 {
-    padding: 40px;
+    padding: 10px;
     background-color: #ffffff;
 }
 
 @media screen and (min-width: 601px) {
  .responsiveBox2 h2 {
     font-family: 'Montserrat', sans-serif;
-	  font-size: 60px;
+	font-size: 60px;
     line-height: 1.3;
     margin-top: -10px;
     }
  .responsiveBox2 p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.4em;
+    color: #484848;
+    }
+ .responsiveBox2 a:link, a:visited {
+    color: #f15a22;
+    text-decoration: underline;
+    }
+ .responsiveBox2 a:hover, a:active {
+    color: #f15a22;
+    text-decoration: underline;
     }
 }
 
@@ -138,6 +147,14 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     line-height: 1.4em;
+    }
+ .responsiveBox2 a:link, a:visited {
+    color: #f15a22;
+    text-decoration: underline;
+    }
+ .responsiveBox2 a:hover, a:active {
+    color: #f15a22;
+    text-decoration: underline;
     }
  .clearObject {
     display: none;
@@ -381,6 +398,10 @@ $('.mapContainer')
 <!-- PLACEHOLDER GOOGLE MAP -->
 <div class="mapContainer" style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.google.com/maps/d/embed?mid=1LhcoqgG-ggN3cVwK12viXqdTV_zbmaNL&amp;z=11&amp;ll=33.52000,-111.93000" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
+<div class="w3-col w3-container alignCenter">
+<p>&iquest;No encuentra una localidad cercana a usted? <a href="https://www.azhealthzone.org/summerfood" onclick="gtag('event', 'click', {'event_action': 'external-link', 'event_category': 'summer-food-program', 'event_label': 'text-link-under-map-to-az-health-zone-sfsp-page-spanish'});" target="_blank">Encuentre m&aacute;s sitios</a> en el AZ Health Zone.</p>
+</div>
+
 <!-- AZ HEALTH ZONE COMING SOON IMAGE
 <div><img alt="Summer Food Service Program" class="imgFluid" src="https://www.azhealthzone.org/images/content/summerfood/summerfood-coming-soon-map-es.jpg" /></div>
 -->
@@ -443,7 +464,7 @@ $('.mapContainer')
     <input type="checkbox" id="toggle5" class="toggle" />
       <label class="title" for="toggle5">&iquest;Hay actividades para ni&ntilde;os en estos sitios de alimentaci&oacute;n y cu&aacute;les son?</label>
       <div class="content">
-        <p>Las ubicaciones pudieran tener o no actividades para ni&ntilde;os. Usted puede encontrar un n&uacute;mero de tel&eacute;fono para cada ubicaci&oacute;n usando nuestro mapa interactivo.</p>
+        <p>Las ubicaciones pudieran tener o no actividades para ni&ntilde;os. Para encontrar una localidad use el mapa interactivo de arriba y encuentre un sitio con actividades especiales.</p>
       </div>
     </div>
 
