@@ -102,7 +102,7 @@
                         <!-- LOGOS -->
 
                         
-                            <a class="logo" href="/">
+                            <a class="logo" href="https://www.azhealthzone.org/">
                                 <svg enable-background="new 0 0 224.3 88.8" viewBox="0 0 224.3 88.8" xmlns="http://www.w3.org/2000/svg">
                                     <g class="blue">
                                         <path d="m1.3 82.3h1.4v2.4h2.7v-2.4h1.4v6.3h-1.4v-2.7h-2.7v2.7h-1.4z"/>
@@ -251,7 +251,7 @@
                     <li>Child must be present to participate.</li>
                 </ul>
 
-                <p class="meals">Click on the location name for contact information and meal times. If no nearby locations are listed in your area, call the Hunger Hotline 1-866-348-6479</p>
+                <p class="meals">Enter your address or zip below to map locations near you. Click any map pin or location name for contact information and meal times. If no nearby locations are listed in your area, call the Hunger Hotline at 1-866-348-6479.</p>
 
             
         </div>
@@ -261,12 +261,6 @@
 </div>
 
 <div class="container mobile-no-container">
-
-    
-        <!-- GOOGLE MAP -->
-
-        
-<!-- GOOGLE MAP -->
 
 <form class="p-3" id="geo-search-form" method="get">
 
@@ -280,229 +274,8 @@
 
 </form>
 
-
-<div class="row row-reverse no-gutters border border-top-0">
-
-    <div class="col-md-8 col-lg-9" id="map-canvas-col">
-
-        <div id="map-canvas"></div>
-
-    </div>
-
-    <div class="col-md-4 col-lg-3" id="map-list-col">
-
-        <div id="map-list">
-
-            <div class="loading">
-                <i class="fa fa-refresh fa-spin"></i>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<script id="map-marker-template" type="text/x-handlebars-template">
-
-    <div class="marker-details">
-
-        {{#if image}}
-        {{{image}}}
-        {{/if}}
-
-        <h4>{{title}}</h4>
-
-        <address>
-            {{#if address1}}
-            {{address1}}<br />
-            {{/if}}
-            {{#if address2}}
-            {{address2}}<br />
-            {{/if}}
-            {{city}}, {{state}} {{zip}}<br />
-            {{phone}}
-            {{#if phone_ext}}
-            Ext. {{phone_ext}}<br />
-            {{/if}}
-        </address>
-
-        <table class="table table-condensed table-striped">
-            <tr>
-                <td><strong>Date Open:</strong></td>
-                <td>{{start_date}}</td>
-            </tr>
-
-            <tr>
-                <td><strong>Date Closed:</strong></td>
-                <td>{{end_date}}</td>
-            </tr>
-
-            <tr>
-                <td><strong>Days of Operation:</strong></td>
-                <td>{{days_of_operation}}</td>
-            </tr>
-
-            {{#if breakfast_time}}
-            <tr>
-                <td><strong>Breakfast:</strong></td>
-                <td>{{breakfast_time}}</td>
-            </tr>
-            {{/if}}
-
-            {{#if lunch_time}}
-            <tr>
-                <td><strong>Lunch:</strong></td>
-                <td>{{lunch_time}}</td>
-            </tr>
-            {{/if}}
-
-            {{#if snack_time}}
-            <tr>
-                <td><strong>Snack:</strong></td>
-                <td>{{snack_time}}</td>
-            </tr>
-            {{/if}}
-
-            {{#if dinner_time}}
-            <tr>
-                <td><strong>Dinner:</strong></td>
-                <td>{{dinner_time}}</td>
-            </tr>
-            {{/if}}
-        </table>
-
-        {{#if bln_adult_meals_served}}
-
-        <p>
-            <em>
-                                    Kids 18 and younger are served at no cost.<br>
-                    Adult meals can be purchased at this location for:
-                            </em>
-        </p>
-
-        <table class="table table-condensed">
-            <tr>
-                <td class="text-center" width="25%">
-                    <strong>Breakfast</strong>
-                </td>
-                <td class="text-center" width="25%">
-                    <strong>Lunch</strong>
-                </td>
-                <td class="text-center" width="25%">
-                    <strong>Snack</strong>
-                </td>
-                <td class="text-center" width="25%">
-                    <strong>Dinner</strong>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="text-center">
-                    {{#if breakfast_time}}
-                    ${{adult_breakfast_charge}}
-                    {{else}}
-                    -
-                    {{/if}}
-                </td>
-                <td class="text-center">
-                    {{#if lunch_time}}
-                    ${{adult_lunch_charge}}
-                    {{else}}
-                    -
-                    {{/if}}
-                </td>
-                <td class="text-center">
-                    {{#if snack_time}}
-                    ${{adult_snack_charge}}
-                    {{else}}
-                    -
-                    {{/if}}
-                </td>
-                <td class="text-center">
-                    {{#if dinner_time}}
-                    ${{adult_dinner_charge}}
-                    {{else}}
-                    -
-                    {{/if}}
-                </td>
-            </tr>
-        </table>
-
-        {{/if}}
-
-    </div>
-
-</script>
-
-<script id="map-list-template" type="text/x-handlebars-template">
-
-    {{#if address}}
-    <div class="small" style="padding: 10px 15px;">
-        You searched for:
-        <strong>{{ address }}</strong>
-    </div>
-    {{/if}}
-
-    <ul class="list-striped list-unstyled map-directory m-0">
-
-        {{#each directory}}
-
-        <li id="map-directory-entry-{{this.id}}" class="map-directory-entry" data-id="{{this.id}}">
-
-            {{#if image}}
-            {{{image}}}
-            {{/if}}
-
-            <strong>{{title}}</strong>
-
-            <address>
-                {{#if address1}}
-                {{address1}}<br />
-                {{/if}}
-                {{#if address2}}
-                {{address2}}<br />
-                {{/if}}
-                {{city}}, {{state}} {{zip}}<br />
-                {{phone}}
-                {{#if phone_ext}}
-                Ext. {{phone_ext}}<br />
-                {{/if}}
-            </address>
-
-            {{#if distance}}
-            <em class="distance small">
-                Distance:
-                {{distance}}
-                miles            </em>
-            {{/if}}
-
-        </li>
-
-        {{else}}
-
-        <li class="directory-no-content">
-            <div class="media text-danger">
-                <div class="media-left">
-                    <i class="fa fa-exclamation-triangle"></i>
-                </div>
-                <div class="media-body">
-                                            Sorry, but we couldn't find any food programs in your area. Please try a different search.<br>
-                        <a class="js-clear-search" href="/summerfood">
-                            Clear Search
-                        </a>
-                                    </div>
-            </div>
-        </li>
-
-        {{/each}}
-
-    </ul>
-
-</script>
-
-    
+<img src="https://maricopacounty.github.io/summer-food-program/img/map-placeholder-min.jpg" class="img-fluid">
+  
 </div>
 
 <div class="container">
